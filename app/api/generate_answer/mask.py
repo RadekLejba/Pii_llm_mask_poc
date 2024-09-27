@@ -86,6 +86,11 @@ class NERPatternMatcher(PatternMatcher):
 
 
 class PII_Mask:
+    """
+    Class containing methods for masking PII data in text.
+    It can find PII by using different pattern matchers and mask it.
+    """
+
     pattern_matchers: tuple[PatternMatcher] = (RegexPatternMatcher, NERPatternMatcher)
     matches_map: dict[str, list[str]] = {}
     masked_map: dict[str, str] = {}
