@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    environment:
+      - HUGGINGFACE_TOKEN=your_token
+      - HUGGINGFACE_MODEL=meta-llama/Llama-3.2-11B-Vision-Instruct
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    # setting up stding for debugging purposes
+    tty: true
+    stdin_open: true

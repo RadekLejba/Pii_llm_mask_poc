@@ -1,0 +1,11 @@
+pytest
+httpx
+aiohttp
+trio
+spacy
+faker
+huggingface_hub
+mock
+
+# debugger for development
+ipdb
