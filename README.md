@@ -8,6 +8,8 @@ For user names and organization names i used [spacy](https://github.com/explosio
 
 LLM API used is Hugging Face [Inference API](https://huggingface.co/inference-api/serverless). Its free to use and open source.
 
+Code is divided into 3 modules: api - containing core logic, schema - pydantic schemas for request and response, tests - unit tests for the app. This might be overkill for such a small app but i like to have proper structure anyway.
+
 ## Setting up env variables
 There are 2 environmental variables, in order to set them you need to edit `docker-compose.yml` file.
 
